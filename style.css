@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("background.png");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	width: 100%;
+    height: 100%;
+}
+
+.card{
+    background: rgb(126, 144, 146);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin: 10px;
+  }
+
+  .box1
+  {
+      float: left;
+      display:block;
+      width: 30%;
+      padding: 10px;
+      margin: 1%;
+      text-align: center;
+  }
+  .box2
+  {
+    float: left;
+    display:block;
+    width: 34%;
+    padding: 10px;
+    margin: 1%;
+    text-align: center;
+  }
+
+  .back{
+      background:rgb(126, 144, 146); ;
+  }
+
+input {
+    width: 250px;
+    height: 40px;
+}
+button {
+    background-color: rgb(212, 205, 185);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 15px;
+    margin: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+}
+
+td{
+        border: 1px solid black;
+        width: 145px;
+        height: 30px;
+        text-align: center;
+        
+}
+
+.blue
+{
+    background-color: rgb(143, 143, 238);
+}
+
+.orange
+{
+    background: rgb(233, 189, 108);
+}
+
+.green
+{
+    background: rgb(134, 219, 134);
+}
