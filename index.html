@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aeroplane Seating Arrangement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h3>Number of passengers:</h3>
+        <input type="number" id="myNumber" >
+        <button class="dice">Click to calculate seating!</button> 
+    </div>
+    <div class="card">
+        <h2>Aeroplane-Front</h2>
+    </div>
+
+
+    <div class="container">
+        <div class="box1 back">
+            <h3>Colum A</h3>
+        </div>
+        <div class="box2 back">
+            <h3>Colum B</h3> 
+        </div>
+        <div class="box1 back">
+            <h3>Colum C</h3>
+
+        </div>
+    </div>
+
+    <table>
+
+    </table>
+
+    <script>
+
+function fn(arr)
+{
+    var x = parseInt(document.getElementById("myNumber").value);
+    var n=parseInt( x/10);
+    for(var i=0; i<n;i++)
+    {
+let tableEl = document.querySelector("table");
+let rowEl = document.createElement("tr");
+rowEl.innerHTML = 
+`<tr>
+<td class="blue">${arr[4]+i*10}</td>
+<td class="orange">${arr[0]+i*10}</td>
+<td class="green">${arr[6]+i*10}</td>
+&nbsp
+&nbsp
+&nbsp
+<td class="green">${arr[7]+i*10}</td>
+<td class="orange">${arr[1]+i*10}</td>
+<td class="orange">${arr[2]+i*10}</td>
+<td class="green">${arr[8]+i*10}</td>
+&nbsp
+&nbsp
+&nbsp
+<td class="green">${arr[9]+i*10}</td>
+<td class="orange">${arr[3]+i*10}</td>
+<td class="blue">${arr[5]+i*10}</td>
+</tr>`
+tableEl.appendChild(rowEl);
+    }
+var y=x%10;
+var a=["","","","","","","","","",""] ;
+for(var i=0;i<y;i++)
+{
+    a[i]+=(arr[i]+n*10);
+}
+if(y!=0)
+{
+let tableEl = document.querySelector("table");
+let rowEl = document.createElement("tr");
+var b="";
+rowEl.innerHTML = 
+`<tr>
+<td class="blue">${a[4]}</td>
+<td class="orange">${a[0]}</td>
+<td class="green">${a[6]}</td>
+&nbsp
+&nbsp
+&nbsp
+<td class="green">${a[7]}</td>
+<td class="orange">${a[1]}</td>
+<td class="orange">${a[2]}</td>
+<td class="green">${a[8]}</td>
+&nbsp
+&nbsp
+&nbsp
+<td class="green">${a[9]}</td>
+<td class="orange">${a[3]}</td>
+<td class="blue">${a[5]}</td>
+</tr>`
+tableEl.appendChild(rowEl);
+}
+}
+
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let btn = document.querySelector("button");
+btn.addEventListener("click",()=>{
+    fn(arr)
+    btn.disabled=true
+});
+
+
+    </script>
+    
+</body>
+</html>
